@@ -43,12 +43,9 @@ public class MyAdapter extends BaseAdapter {
 
         image = (ImageView) vista.findViewById(R.id.photo);
         title = (TextView) vista.findViewById(R.id.title);
-        subtitle = (TextView) vista.findViewById(R.id.subtitle);
 
-        String cover_path = loc.get(i).Image;
-        image.setImageResource(context.getResources().getIdentifier("drawable/" + cover_path, null, context.getPackageName()));
+        image.setImageResource(loc.get(i).Image);
         title.setText(loc.get(i).Name);
-        subtitle.setText(loc.get(i).Address);
 
         vista.setOnClickListener(new View.OnClickListener() {
             @Override

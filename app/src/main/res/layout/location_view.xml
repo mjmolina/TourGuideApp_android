@@ -1,21 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autoLink="web"
-        android:text="Holi"/>
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/address"
-        android:layout_marginTop="100dp"
-        android:paddingTop="100dp"
-        android:layout_width="wrap_content"
-        android:autoLink="map"
-        android:text="test"
-        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ImageView_loc_height"
+            android:layout_marginTop="@dimen/ImageView_margin_loc"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ubahn" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/View_height_loc"
+            android:layout_marginTop="@dimen/View_marginTop_loc"
+            android:background="@color/background_loc" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_below="@+id/line"
+            android:layout_marginBottom="@dimen/TextView_marginBottom_loc"
+            android:layout_marginEnd="@dimen/TextView_marginStartLeft_loc"
+            android:layout_marginLeft="@dimen/TextView_marginStartLeft_loc"
+            android:layout_marginRight="@dimen/TextView_marginStartLeft_loc"
+            android:layout_marginStart="@dimen/TextView_marginStartLeft_loc"
+            android:layout_marginTop="@dimen/TextView_marginTop_loc"
+            android:drawablePadding="@dimen/TextView_padding_loc"
+            android:gravity="center_vertical"
+            android:textColor="@color/ColorName_loc"
+            android:textSize="@dimen/TextView_20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginEnd="@dimen/TextView_marginStartLeft_loc"
+            android:layout_marginLeft="@dimen/TextView_marginStartLeft_loc"
+            android:layout_marginRight="@dimen/TextView_marginStartLeft_loc"
+            android:layout_marginStart="@dimen/TextView_marginStartLeft_loc"
+            android:padding="@dimen/TextView_padding_loc"
+            android:textAlignment="gravity"
+            android:textColor="@color/TextColor_loc"
+            android:textSize="@dimen/Textview_15sp" />
+
+        <TextView
+            android:id="@+id/web"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/TextView_marginBottom_loc2"
+            android:layout_marginLeft="@dimen/TextView_marginStartLeft_loc"
+            android:layout_marginStart="@dimen/TextView_marginStartLeft_loc"
+            android:autoLink="web"
+            android:drawableLeft="@drawable/ic_http_black_18dp"
+            android:drawablePadding="@dimen/TextView_drawablePadding_loc"
+            android:drawableStart="@drawable/ic_http_black_18dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/TextView_16sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/TextView_height_loc"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/TextView_marginBottom_loc"
+            android:layout_marginLeft="@dimen/TextView_margin"
+            android:layout_marginStart="@dimen/TextView_margin"
+            android:autoLink="map"
+            android:drawablePadding="@dimen/TextView_drawablePaddingBig_loc"
+            android:drawableLeft="@drawable/ic_location_on_black_24dp"
+            android:drawableStart="@drawable/ic_location_on_black_24dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/TextView_16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
 
 </android.support.constraint.ConstraintLayout>

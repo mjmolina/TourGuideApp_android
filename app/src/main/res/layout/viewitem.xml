@@ -2,43 +2,28 @@
     <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_listview"
+        android:padding="@dimen/View_padding">
 
         <ImageView
             android:id="@+id/photo"
             android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:padding="10dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"
+            android:layout_height="@dimen/ImageView_height"
+            android:layout_margin="@dimen/ImageView_margin"
             android:scaleType="centerCrop"
             android:src="@drawable/ubahn" />
-
 
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/photo"
-            android:layout_marginLeft="30dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginLeft="@dimen/TextView_margin"
+            android:layout_marginStart="@dimen/TextView_margin"
             android:layout_gravity="center"
-            android:text="places"
-            android:textSize="15sp">
-
-        </TextView>
-
-        <TextView
-            android:id="@+id/subtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/title"
-            android:layout_marginLeft="30dp"
-            android:layout_marginStart="30dp"
-            android:text="orientacion"
-            android:textSize="17dp">
-
-        </TextView>
+            android:textSize="@dimen/textView_20sp"
+            android:textStyle="bold"/>
 
     </RelativeLayout>
 

@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="background_loc">#f2847f</color>
+    <color name="ColorName_loc">#535d62</color>
+    <color name="TextColor_loc">#535d62</color>
+    <color name="informationColor">#9ab899</color>
+    <color name="background_app">#27363b</color>
 </resources>

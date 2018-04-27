@@ -5,16 +5,16 @@ public class Location {
     String Address;
     String Description;
     String Website;
-    String Image;
+    int Image;
+
     // 0: Bar/Restaurant
     // 1: Sight seeing
     // 2: Street art
     // 3: Parks
     int Type;
 
-    //Type should be: //BarRestaurant//sightseeing//
 
-    public Location(String name, String address, String description, String website, int type, String image){
+    public Location(String name, String address, String description, String website, int type, int image){
         this.Name = name;
         this.Address = address;
         this.Description = description;

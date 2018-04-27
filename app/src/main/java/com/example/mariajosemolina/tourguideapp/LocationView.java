@@ -7,9 +7,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.ImageView;
 
 
 public class LocationView extends AppCompatActivity {
+
+    ImageView image;
+    TextView name, description, web, location;
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -30,39 +34,52 @@ public class LocationView extends AppCompatActivity {
         Bundle params = getIntent().getExtras();
         String locationName = params.getString("locationName");
 
-        TextView text = (TextView) findViewById(R.id.text);
+        name = (TextView) findViewById(R.id.name);
         final TextView address = (TextView) findViewById(R.id.address);
+        description = (TextView) findViewById(R.id.description);
+        web = (TextView) findViewById(R.id.web);
+        image = (ImageView) findViewById(R.id.image);
 
+        // Start to look for the location that has the same "locationName"
         for (int i = 0; i < start.loc.size();i++) {
-            Location temporaryLocation = start.loc.get(i);
-            if (temporaryLocation.Name.equals(locationName)) {
-                System.out.println("We found the elements of the object");
-                // We can access of manipulate this information by using
-                // the values:
-                // temporaryLocation.Name
-                // temporaryLocation.Address
-                // temporaryLocation.Description
-                // temporaryLocation.Website
-                // temporaryLocation.Image
-                // temporaryLocation.Type
-                String url = "https://maureira.xyz";
-                text.setText("Check out the website of the pololo: "+url);
-                final String map = "http://maps.google.co.in/maps?q=" + temporaryLocation.Address;
-                address.setText("Click me!  "+temporaryLocation.Address);
+            Location currentLocation = start.loc.get(i);
+            if (currentLocation.Name.equals(locationName)) {
+
+                // Setting the Name and Address of the Location
+                name.setText(currentLocation.Name);
+                address.setText(currentLocation.Address);
+
+                //  Hide the description TextView if it is empty and if not, we show it.
+                if (currentLocation.Description == "") {
+                    description.setVisibility(View.GONE);
+                }
+                else {
+                    description.setText(currentLocation.Description);
+                }
+
+                //  Hide the URL TextView if it is empty and if not, we show it.
+                if (currentLocation.Website == "") {
+                    web.setVisibility(View.GONE);
+                }
+                else {
+                    web.setText(currentLocation.Website);
+                }
+                // Generating Google Maps URL to open it on the browser
+                final String map = "http://maps.google.co.in/maps?q=" + currentLocation.Address;
 
                 address.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-
-
                         Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(map));
                         startActivity(i);
                     }
                 });
 
+                image.setImageResource(currentLocation.Image);
+
+                // If we found the location, we break from the for.
+                break;
             }
         }
-
-
     }
 }
