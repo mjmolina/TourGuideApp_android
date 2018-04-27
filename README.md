@@ -26,3 +26,5 @@ to display the information of the selected location.
 
 * I included an Intent to open the address from all the locations in Google Maps.
 * The TextView that displays the URL, uses the autoLink option, so it is also clickable and will open web on a browser.
+
+![Screenshot](previewTourGuideApp2.png "Logo Title Text 1")
