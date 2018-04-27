@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ImageView_height_loc_Land"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ubahn" />
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/View_height_loc"
+                    android:layout_marginTop="@dimen/View_marginTop_locLand"
+                    android:background="@color/background_loc" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_below="@+id/line"
+                    android:layout_marginBottom="@dimen/TextView_marginBottom_loc"
+                    android:layout_marginEnd="@dimen/TextView_marginStartLeft_loc"
+                    android:layout_marginLeft="@dimen/TextView_marginStartLeft_loc"
+                    android:layout_marginRight="@dimen/TextView_marginStartLeft_loc"
+                    android:layout_marginStart="@dimen/TextView_marginStartLeft_loc"
+                    android:layout_marginTop="228dp"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/TextView_padding_loc"
+                    android:text="Name"
+                    android:textColor="@color/ColorName_loc"
+                    android:textSize="@dimen/TextView_20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:layout_marginEnd="@dimen/TextView_marginStartLeft_loc"
+                    android:layout_marginLeft="@dimen/TextView_marginStartLeft_loc"
+                    android:layout_marginRight="@dimen/TextView_marginStartLeft_loc"
+                    android:layout_marginStart="@dimen/TextView_marginStartLeft_loc"
+                    android:padding="@dimen/textView_padding_loc2_land"
+                    android:text="blablablablabla"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/ColorName_loc"
+                    android:textSize="@dimen/textView_15sp" />
+
+                <TextView
+                    android:id="@+id/web"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/description"
+                    android:layout_marginEnd="@dimen/TextView_margin"
+                    android:layout_marginLeft="@dimen/TextView_margin"
+                    android:layout_marginRight="@dimen/TextView_marginStartLeft_loc"
+                    android:layout_marginStart="@dimen/TextView_marginStart_loc"
+                    android:layout_marginTop="@dimen/TextView_marginStartLeft_loc"
+                    android:autoLink="web"
+                    android:drawableLeft="@drawable/ic_http_black_18dp"
+                    android:drawablePadding="@dimen/TextView_drawablePadding_loc"
+                    android:drawableStart="@drawable/ic_http_black_18dp"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/TextView_paddingTop_loc"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/ColorName_loc"
+                    android:textSize="@dimen/textView_15sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/TextView_marginBottom_loc"
+                    android:layout_below="@+id/web"
+                    android:layout_marginEnd="@dimen/TextView_margin"
+                    android:layout_marginLeft="@dimen/TextView_margin"
+                    android:layout_marginRight="@dimen/TextView_marginStartLeft_loc"
+                    android:layout_marginStart="@dimen/TextView_margin"
+                    android:layout_marginTop="@dimen/TextView_marginStartLeft_loc"
+                    android:autoLink="map"
+                    android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                    android:drawablePadding="@dimen/TextView_drawablepadding2_loc"
+                    android:drawableStart="@drawable/ic_location_on_black_24dp"
+                    android:gravity="center_vertical"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/ColorName_loc"
+                    android:textSize="@dimen/textView_15sp" />
+
+            </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

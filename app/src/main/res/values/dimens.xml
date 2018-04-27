@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="View_padding">10dp</dimen>
+    <dimen name="ImageView_height">175dp</dimen>
+    <dimen name="ImageView_margin">10dp</dimen>
+    <dimen name="textView_20sp">20sp</dimen>
+    <dimen name="TextView_margin">15dp</dimen>
+    <dimen name="ImageView_loc_height">200dp</dimen>
+    <dimen name="ImageView_margin_loc">10dp</dimen>
+    <dimen name="View_margin_loc">2dp</dimen>
+    <dimen name="View_height_loc">2dp</dimen>
+    <dimen name="View_marginTop_loc">220dp</dimen>
+    <dimen name="TextView_marginStartLeft_loc">10dp</dimen>
+    <dimen name="TextView_marginBottom_loc">5dp</dimen>
+    <dimen name="TextView_marginTop_loc">228dp</dimen>
+    <dimen name="TextView_padding_loc">5dp</dimen>
+    <dimen name="TextView_20sp">20sp</dimen>
+    <dimen name="Textview_15sp">15sp</dimen>
+    <dimen name="TextView_height_loc">58dp</dimen>
+    <dimen name="TextView_16sp">16sp</dimen>
+    <dimen name="TextView_drawablePadding_loc">15dp</dimen>
+    <dimen name="TextView_drawablePaddingBig_loc">25dp</dimen>
+    <dimen name="ImageView_height_loc_Land">210dp</dimen>
+    <dimen name="TextView_marginBottom_loc2">53dp</dimen>
+    <dimen name="View_marginTop_locLand">220dp</dimen>
+    <dimen name="textView_padding_loc2_land">2dp</dimen>
+    <dimen name="textView_15sp">15sp</dimen>
+    <dimen name="ListView_marginTopBottom">8dp</dimen>
+    <dimen name="ListView_padding">5dp</dimen>
+    <dimen name="TextView_marginStart_loc">15dp</dimen>
+    <dimen name="TextView_paddingTop_loc">20dp</dimen>
+    <dimen name="TextView_drawablepadding2_loc">30dp</dimen>
+</resources>
