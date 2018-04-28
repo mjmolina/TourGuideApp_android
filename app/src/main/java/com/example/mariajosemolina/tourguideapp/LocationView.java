@@ -34,15 +34,15 @@ public class LocationView extends AppCompatActivity {
         Bundle params = getIntent().getExtras();
         String locationName = params.getString("locationName");
 
-        name = (TextView) findViewById(R.id.name);
-        final TextView address = (TextView) findViewById(R.id.address);
-        description = (TextView) findViewById(R.id.description);
-        web = (TextView) findViewById(R.id.web);
-        image = (ImageView) findViewById(R.id.image);
+        name = findViewById(R.id.name);
+        final TextView address = findViewById(R.id.address);
+        description = findViewById(R.id.description);
+        web = findViewById(R.id.web);
+        image = findViewById(R.id.image);
 
         // Start to look for the location that has the same "locationName"
-        for (int i = 0; i < start.loc.size();i++) {
-            Location currentLocation = start.loc.get(i);
+        for (int i = 0; i < StartActivity.loc.size(); i++) {
+            Location currentLocation = StartActivity.loc.get(i);
             if (currentLocation.Name.equals(locationName)) {
 
                 // Setting the Name and Address of the Location
@@ -50,7 +50,7 @@ public class LocationView extends AppCompatActivity {
                 address.setText(currentLocation.Address);
 
                 //  Hide the description TextView if it is empty and if not, we show it.
-                if (currentLocation.Description == "") {
+                if (currentLocation.Description.isEmpty()) {
                     description.setVisibility(View.GONE);
                 }
                 else {
@@ -58,7 +58,7 @@ public class LocationView extends AppCompatActivity {
                 }
 
                 //  Hide the URL TextView if it is empty and if not, we show it.
-                if (currentLocation.Website == "") {
+                if (currentLocation.Website.isEmpty()) {
                     web.setVisibility(View.GONE);
                 }
                 else {

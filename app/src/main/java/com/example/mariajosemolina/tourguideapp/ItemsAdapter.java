@@ -1,6 +1,5 @@
 package com.example.mariajosemolina.tourguideapp;
 
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,7 @@ import android.content.Intent;
 import java.util.ArrayList;
 
 
-public class MyAdapter extends BaseAdapter {
+public class ItemsAdapter extends BaseAdapter {
     private static LayoutInflater inflater = null;
 
     Context context;
@@ -21,33 +20,33 @@ public class MyAdapter extends BaseAdapter {
     ImageView image;
     TextView title;
     TextView subtitle;
-    View vista;
+    View itemView;
 
-    public MyAdapter(Context myContext, ArrayList<Location> myLoc) {
+    public ItemsAdapter(Context myContext, ArrayList<Location> myLocation) {
         this.context = myContext;
-        this.loc = myLoc;
+        this.loc = myLocation;
 
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
     public View getView(final int i, View view, ViewGroup viewGroup) {
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         if (view == null) {
-            vista = inflater.inflate(R.layout.viewitem, null);
+            itemView = inflater.inflate(R.layout.viewitem, null);
         }
         else {
-            vista = (View) view;
+            itemView = view;
         }
 
-        image = (ImageView) vista.findViewById(R.id.photo);
-        title = (TextView) vista.findViewById(R.id.title);
+        image = itemView.findViewById(R.id.photo);
+        title = itemView.findViewById(R.id.title);
 
         image.setImageResource(loc.get(i).Image);
         title.setText(loc.get(i).Name);
 
-        vista.setOnClickListener(new View.OnClickListener() {
+        itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, LocationView.class);
@@ -57,7 +56,7 @@ public class MyAdapter extends BaseAdapter {
             }
         });
 
-        return vista;
+        return itemView;
     }
 
     @Override

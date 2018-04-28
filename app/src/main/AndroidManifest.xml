@@ -11,7 +11,7 @@
         android:hardwareAccelerated="false"
         android:largeHeap="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".start">
+        <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,10 +20,10 @@
         </activity>
         <activity
             android:name=".LocationView"
-            android:parentActivityName=".start" >
+            android:parentActivityName=".StartActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.mariajosemolina.tourguideapp.start" />
+                android:value="com.example.mariajosemolina.tourguideapp.StartActivity" />
         </activity>
     </application>
 
