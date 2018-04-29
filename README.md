@@ -14,7 +14,7 @@ The activities structure is the following:
 * The information of each Location is stored on a custom class (Location)
 * The "data base" I created is just an ArrayList of this custom class.
 * The main screen has 4 lists (Monuments, Restaurants, Street Art and Parks)
-* Users can navigate between the lists (Fragments), becauese I am using a ViewPager plus a TabLayout.
+* Users can navigate between the lists (Fragments), because I am using a ViewPager plus a TabLayout.
 * All the views include pictures from Berlin's location (from my personal photos and free resources).
 * The application is valid both in vertical and horizontal.
 
